@@ -1,12 +1,10 @@
 import random
 
 def get_computer_choice():
-    """Returns a random choice from rock, paper, scissors."""
     choices = ["rock", "paper", "scissors"]
     return random.choice(choices)
 
 def get_user_choice():
-    """Prompts the user to enter rock, paper, or scissors, and returns the choice."""
     while True:
         user_input = input("Enter rock, paper, or scissors: ").strip().lower()
         if user_input in ["rock", "paper", "scissors"]:
@@ -15,7 +13,6 @@ def get_user_choice():
             print("Invalid choice. Please enter rock, paper, or scissors.")
 
 def determine_winner(user_choice, computer_choice):
-    """Determines the winner based on user and computer choices."""
     if user_choice == computer_choice:
         return "tie"
     elif (user_choice == "rock" and computer_choice == "scissors") or \
@@ -26,7 +23,6 @@ def determine_winner(user_choice, computer_choice):
         return "lose"
 
 def play_game():
-    """Main function to run the game loop."""
     wins, losses, ties = 0, 0, 0
 
     while True:
@@ -57,3 +53,4 @@ def play_game():
 
 if __name__ == "__main__":
     play_game()
+
